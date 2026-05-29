@@ -6,7 +6,7 @@ export const API_BASE_URL =
   process.env.REACT_APP_API_URL ||
   (isLocalDevelopment
     ? 'http://localhost:5000/api'
-    : 'https://loans-fw8w.onrender.com/api');
+    : 'https://loans-rx7r.onrender.com/api');
 
 const getToken = () => localStorage.getItem('loanvia_admin_token') || '';
 
