@@ -2,11 +2,9 @@ const isLocalDevelopment =
   typeof window !== 'undefined' &&
   (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
 
-export const API_BASE_URL =
-  process.env.REACT_APP_API_URL ||
-  (isLocalDevelopment
-    ? 'http://localhost:5000/api'
-    : 'https://loans-rx7r.onrender.com/api');
+export const API_BASE_URL = isLocalDevelopment
+  ? 'http://localhost:5000/api'
+  : 'https://loans-rx7r.onrender.com/api';
 
 const getToken = () => localStorage.getItem('loanvia_admin_token') || '';
 
